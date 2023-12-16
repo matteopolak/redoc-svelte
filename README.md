@@ -1,5 +1,7 @@
 # Redoc Svelte
 
+[![npm](http://img.shields.io/npm/v/redoc-svelte.svg)](https://www.npmjs.com/package/redoc-svelte) [![License](https://img.shields.io/npm/l/redoc-svelte.svg)](https://github.com/matteopolak/redoc-svelte/blob/main/LICENSE)
+
 This is a [Svelte](https://svelte.dev) component for [Redoc](https://redocly.com).
 
 ```bash
