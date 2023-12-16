@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { RedocStandalone, type RedocRawOptions } from 'redoc';
+	import type { RedocRawOptions } from 'redoc';
 	import { createEventDispatcher, onMount } from 'svelte';
 	import { createRoot } from 'react-dom/client';
 	import { createElement } from 'react';
@@ -10,7 +10,9 @@
 
 	const dispatch = createEventDispatcher<{ loaded?: Error }>();
 
-	onMount(() => {
+	onMount(async () => {
+		const { RedocStandalone } = await import('redoc');
+
 		const root = createRoot(container);
 
 		root.render(
