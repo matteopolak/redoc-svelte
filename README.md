@@ -4,7 +4,7 @@
 
 A drop-in [Svelte](https://svelte.dev) component for [Redoc](https://redocly.com).
 
-> **Note:**
+> [!IMPORTANT]
 > `redoc-svelte` is not compatible with SvelteKit 1. Please use SvelteKit 2 or later.
 
 ```bash
