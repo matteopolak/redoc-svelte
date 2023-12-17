@@ -2,7 +2,10 @@
 
 [![npm](http://img.shields.io/npm/v/redoc-svelte.svg)](https://www.npmjs.com/package/redoc-svelte) [![License](https://img.shields.io/npm/l/redoc-svelte.svg)](https://github.com/matteopolak/redoc-svelte/blob/main/LICENSE)
 
-This is a [Svelte](https://svelte.dev) component for [Redoc](https://redocly.com).
+A drop-in [Svelte](https://svelte.dev) component for [Redoc](https://redocly.com).
+
+> **Note:**
+> `redoc-svelte` is not compatible with SvelteKit 1. Please use SvelteKit 2 or later.
 
 ```bash
 pnpm add redoc-svelte
