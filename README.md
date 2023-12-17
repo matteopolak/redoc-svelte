@@ -4,14 +4,14 @@
 
 A drop-in [Svelte](https://svelte.dev) component for [Redoc](https://redocly.com).
 
-> [!IMPORTANT]
-> `redoc-svelte` is not compatible with SvelteKit 1. Please use SvelteKit 2 or later.
-
 ```bash
 pnpm add redoc-svelte
 yarn add redoc-svelte
 npm install redoc-svelte
 ```
+
+> [!IMPORTANT]
+> `redoc-svelte` is not compatible with SvelteKit v1, please use v2 instead.
 
 ## Usage
 
@@ -31,3 +31,7 @@ For more examples, see the [Redoc documentation](https://redocly.com/docs/redoc/
   on:loaded={e => console.log('loaded', e?.detail)}
 />
 ```
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
