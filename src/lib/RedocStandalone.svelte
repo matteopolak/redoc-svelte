@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { createRoot, type Root } from 'react-dom/client';
+	import { createElement } from 'react';
 	import * as redoc from 'redoc';
 	import type { RedocRawOptions } from 'redoc';
+
 	import { createEventDispatcher, onMount } from 'svelte';
-	import { createRoot } from 'react-dom/client';
-	import { createElement } from 'react';
 
 	export let spec: object | undefined = undefined;
 	export let specUrl: string | undefined = undefined;
@@ -11,9 +12,11 @@
 
 	const dispatch = createEventDispatcher<{ loaded?: Error }>();
 
-	onMount(async () => {
-		const root = createRoot(container);
+	onMount(() => {
+		root = createRoot(container);
+	});
 
+	$: if (root && container) {
 		root.render(
 			createElement(redoc.RedocStandalone, {
 				spec,
@@ -24,8 +27,9 @@
 				},
 			}),
 		);
-	});
+	}
 
+	let root: Root | undefined = undefined;
 	let container: HTMLDivElement;
 </script>
 
