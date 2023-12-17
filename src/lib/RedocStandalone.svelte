@@ -3,7 +3,6 @@
 	import { createElement } from 'react';
 	import * as redoc from 'redoc';
 	import type { RedocRawOptions } from 'redoc';
-	import 'prismjs';
 
 	import { createEventDispatcher, onMount } from 'svelte';
 

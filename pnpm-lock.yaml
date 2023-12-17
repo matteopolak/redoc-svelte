@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  prismjs:
-    specifier: ^1.29.0
-    version: 1.29.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
