@@ -12,13 +12,13 @@
 	const dispatch = createEventDispatcher<{ loaded?: Error }>();
 
 	onMount(async () => {
+		redoc = await import('redoc');
 		root = createRoot(container);
-		RedocStandalone = await import('redoc').then(m => m.RedocStandalone);
 	});
 
-	$: if (root && container && RedocStandalone) {
+	$: if (root && container && redoc) {
 		root.render(
-			createElement(RedocStandalone, {
+			createElement(redoc.RedocStandalone, {
 				spec,
 				specUrl,
 				options,
@@ -29,8 +29,7 @@
 		);
 	}
 
-	let RedocStandalone: typeof import('redoc').RedocStandalone | undefined =
-		undefined;
+	let redoc: typeof import('redoc') | undefined = undefined;
 	let root: Root | undefined = undefined;
 	let container: HTMLDivElement;
 </script>
